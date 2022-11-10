@@ -9,7 +9,7 @@ class SentMessageController extends Controller
     public function sentMessage(Request $request)
     {
         // return $request->all();
-        $basic  = new \Vonage\Client\Credentials\Basic("54a526f4", "P83tAf2y8xJbth7O");
+        $basic  = new \Vonage\Client\Credentials\Basic("API key", "API Secret");
         $client = new \Vonage\Client($basic);
 
         $response = $client->sms()->send(
